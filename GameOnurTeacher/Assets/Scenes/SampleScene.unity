@@ -716,11 +716,10 @@ Transform:
   m_GameObject: {fileID: 1316300866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.53, y: -0.8443, z: 0}
-  m_LocalScale: {x: 2.5605786, y: 1.2319107, z: 1}
+  m_LocalPosition: {x: 0.8385, y: -1.7677, z: 0}
+  m_LocalScale: {x: 1.3956625, y: 1.0448319, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1960973959}
+  m_Children: []
   m_Father: {fileID: 1967469444}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1316300868
@@ -957,37 +956,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1960973958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960973959}
-  m_Layer: 0
-  m_Name: Colledier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1960973959
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960973958}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.198, y: 0.6853581, z: 0}
-  m_LocalScale: {x: 8.15, y: 16.94012, z: 20.868715}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1316300867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967469442
 GameObject:
