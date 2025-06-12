@@ -27,6 +27,6 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-        }
+        } //babapro
     }
 }
