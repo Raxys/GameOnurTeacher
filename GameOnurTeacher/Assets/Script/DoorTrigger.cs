@@ -1,16 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; // UI kullanımı için
 
 public class DoorTrigger : MonoBehaviour
 {
-    public string nextSceneName; // Inspector'dan ayarlanacak
+    public string nextSceneName; // Sahne adı (Inspector'dan ayarlanır)
+    public Text promptText; // Ekrana yazı göstermek için UI Text
+
     private bool isPlayerInRange = false;
+
+    void Start()
+    {
+        // Oyun başladığında yazı gizli olsun
+        if (promptText != null)
+        {
+            promptText.gameObject.SetActive(false);
+        }
+    }
 
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange)
         {
-            SceneManager.LoadScene(nextSceneName); // Dinamik sahne ge�i�i
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene(nextSceneName); // Sahneyi yükle
+            }
         }
     }
 
@@ -19,6 +34,11 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (promptText != null)
+            {
+                promptText.text = "İçeri girmek için [E] tuşuna bas";
+                promptText.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -27,6 +47,10 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-        } //babapro
+            if (promptText != null)
+            {
+                promptText.gameObject.SetActive(false);
+            }
+        }
     }
 }

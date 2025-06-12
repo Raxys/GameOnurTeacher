@@ -3383,14 +3383,14 @@ RectTransform:
   m_GameObject: {fileID: 1850252461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.34, y: 1.34, z: 1.34}
+  m_LocalScale: {x: 1.49, y: 1.49, z: 1.49}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 801012174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265, y: 66}
+  m_AnchoredPosition: {x: 60, y: 87}
   m_SizeDelta: {x: 160.33, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1850252463
@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.11830664, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3652,6 +3652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: Odalar
+  promptText: {fileID: 1850252463}
 --- !u!61 &2092169375
 BoxCollider2D:
   m_ObjectHideFlags: 0
