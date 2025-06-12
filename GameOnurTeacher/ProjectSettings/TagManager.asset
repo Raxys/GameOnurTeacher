@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Collectible
+  - layer
   layers:
   - Default
   - TransparentFX
@@ -45,5 +46,10 @@ TagManager:
   - name: Player
     uniqueID: 1528824657
     locked: 0
+  - name: Ground
+    uniqueID: 3773406919
+    locked: 0
   m_RenderingLayers:
   - Default
+  - Ground
+  - Player
