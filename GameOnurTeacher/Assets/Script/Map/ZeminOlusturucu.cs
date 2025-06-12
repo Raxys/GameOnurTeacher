@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ZeminOlusturucu : MonoBehaviour
 {
+    private const SpriteDrawMode sliced = SpriteDrawMode.Sliced;
     [SerializeField] private Vector2 zeminBoyutu = new Vector2(20f, 1f);
     [SerializeField] private Vector2 zeminPozisyonu = new Vector2(0f, -3f);
     [SerializeField] private Material zeminMaterial;
@@ -15,7 +16,7 @@ public class ZeminOlusturucu : MonoBehaviour
         // Sprite Renderer ekle (isteğe bağlı görsel için)
         SpriteRenderer sr = zemin.AddComponent<SpriteRenderer>();
         sr.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0,0,1,1), Vector2.one * 0.5f);
-        sr.drawMode = SpriteDrawMode.Sliced;
+        sr.drawMode = sliced;
         sr.size = zeminBoyutu;
         sr.color = Color.gray;
 

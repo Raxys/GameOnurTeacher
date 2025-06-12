@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Odalar.unity
+    guid: d09d74eb9b998df43b2bd18807197cdd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 993f087115ced53469978a64a5abe44b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
