@@ -20,14 +20,14 @@ public class InteractableObject : MonoBehaviour
 
     void Update()
     {
-        // "E" tuþuna basýldýðýnda item varsa
+        // "E" tuï¿½una basï¿½ldï¿½ï¿½ï¿½nda item varsa
         if (Input.GetKeyDown(KeyCode.E) && currentItem != null)
         {
             itemCount++;
-            Destroy(currentItem);   // Item'ý yok et
+            Destroy(currentItem);   // Item'ï¿½ yok et
             currentItem = null;
 
-            // UI güncelle
+            // UI gï¿½ncelle
             UpdateItemCountText();
             ePromptText.gameObject.SetActive(false);
 
@@ -40,7 +40,7 @@ public class InteractableObject : MonoBehaviour
         if (other.CompareTag("Collectible"))
         {
             currentItem = other.gameObject;
-            ePromptText.text = "Toplamak için [E]"; // Dinamik mesaj
+            ePromptText.text = "Toplamak iï¿½in [E]"; // Dinamik mesaj
             ePromptText.gameObject.SetActive(true);
         }
     }
