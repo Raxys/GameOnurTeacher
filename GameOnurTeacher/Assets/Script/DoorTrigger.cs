@@ -10,7 +10,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(nextSceneName); // Dinamik sahne geçiþi
+            SceneManager.LoadScene(nextSceneName); // Dinamik sahne geï¿½iï¿½i
         }
     }
 

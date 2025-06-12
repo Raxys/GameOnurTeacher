@@ -3,6 +3,7 @@ using UnityEngine;
 public class Simple2DMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float sprintMultiplier = 1.5f;  // Shift’le ne kadar hızlanacağı
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -19,37 +20,27 @@ public class Simple2DMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        // Normalize edilmiş hareket vektörü
         moveInput = new Vector2(moveX, moveY).normalized;
 
-        // Tüm yönleri önce kapat
+        // Animasyonları sıfırla
         anim.SetBool("Right", false);
         anim.SetBool("Left", false);
         anim.SetBool("top", false);
         anim.SetBool("down", false);
 
-        // Hangi yön daha baskınsa o animasyon aktif olsun
         if (moveInput != Vector2.zero)
         {
             if (Mathf.Abs(moveX) > Mathf.Abs(moveY))
-            {
-                if (moveX > 0)
-                    anim.SetBool("Right", true);
-                else
-                    anim.SetBool("Left", true);
-            }
+                anim.SetBool(moveX > 0 ? "Right" : "Left", true);
             else
-            {
-                if (moveY > 0)
-                    anim.SetBool("top", true);
-                else
-                    anim.SetBool("down", true);
-            }
+                anim.SetBool(moveY > 0 ? "top" : "down", true);
         }
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        // Shift'e basılıysa sprintMultiplier kadar hızlan
+        float speed = moveSpeed * (Input.GetKey(KeyCode.LeftShift) ? sprintMultiplier : 1f);
+        rb.linearVelocity = moveInput * speed;
     }
 }
